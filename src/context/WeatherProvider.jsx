@@ -60,7 +60,8 @@ export function WeatherProvider({ children }) {
 
   // 05:00 - daytime
   // 19:00 - nighttime
-  const localHour = new Date(weatherData.location.localtime).getHours();
+  // const localHour = new Date(weatherData.location.localtime).getHours();
+  const localHour = 5;
   const state = localHour >= 5 && localHour < 19 ? "daytime" : "nighttime";
   return (
     <WeatherContext.Provider value={{ ...weatherData, state }}>
